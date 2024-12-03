@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "start": "NODE_ENV=\"development\" node main.js",
+    "build": "tsc main.ts api/*.ts lib/*.ts tests/api/*.ts tests/unit/*.ts",
+    "tests-product": "NODE_ENV=\"testing\" ./node_modules/.bin/mocha ./tests/unit/product.js ./tests/api/product.js",
+    "tests-product-rest": "NODE_ENV=\"testing\" ./node_modules/.bin/mocha ./tests/unit/product-rest.js ./tests/api/product-rest.js",
+    "tests-history": "NODE_ENV=\"testing\" ./node_modules/.bin/mocha ./tests/unit/history.js ./tests/api/history.js"
+  },
+  "dependencies": {
+    "config": "^3.3.12",
+    "express": "^4.21.1",
+    "pg": "^8.13.1",
+    "supertest": "^7.0.0",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "should": "^13.2.3"
+  }
+}
